@@ -69,7 +69,9 @@ const Feed = () => {
             className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
             onClick={() => {
               console.log(generatedBios);
-              navigator.clipboard.writeText(JSON.stringify(generatedBios));
+              navigator.clipboard.writeText(
+                JSON.stringify(generatedBios.value)
+              );
               toast("Bio copied to clipboard", {
                 icon: "✂️",
               });
